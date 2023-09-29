@@ -1,0 +1,41 @@
+{
+  "name": "curry-orders-react",
+  "version": "0.0.1",
+  "description": "Application to manage curry orders for a group of people",
+  "dependencies": {
+    "@carbon/react": "^1.36.0",
+    "ibmcloud-appid-js": "^1.0.1",
+    "node-fetch": "^3.3.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "5.0.0",
+    "react-scripts": "^5.0.1",
+    "sass": "^1.66.1"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "*"
+  },
+  "scripts": {
+    "build": "react-scripts build",
+    "ci-check": "yarn format:diff && yarn test",
+    "clean": "yarn cache clean && yarn install",
+    "eject": "react-scripts eject",
+    "format": "prettier --write \"**/*.{js,md,scss}\"",
+    "format:diff": "prettier --list-different \"**/*.{js,md,scss}\"",
+    "format:staged": "prettier --write",
+    "start": "react-scripts start",
+    "test": "react-scripts test"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

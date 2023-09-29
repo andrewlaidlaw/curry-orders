@@ -1,0 +1,23 @@
+openapi: '3.0.2'
+info:
+  title: order-apis
+  version: '1.0'
+servers:
+  - url: https://api.server.test/v1
+paths:
+  /healthz:
+    get:
+      description: 'Checks the health of the API endpoint'
+      parameters: []
+      responses:
+        '200':
+          description: OK
+        '404':
+          description: Not available
+  /url:
+    get:
+      description: 'Returns the URL details of the MongoDB instance in use'
+      parameters: []
+      responses:
+        '200':
+          description: OK

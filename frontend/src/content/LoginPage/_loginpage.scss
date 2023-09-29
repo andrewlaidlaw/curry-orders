@@ -1,0 +1,42 @@
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/type' as *;
+@use '@carbon/react/scss/breakpoint' as *;
+@use '@carbon/react/scss/theme' as *;
+
+.order-page__banner {
+    padding-top: $spacing-05;
+    padding-bottom: $spacing-07 * 4;
+    padding-left: $spacing-06;
+    padding-right: $spacing-06;
+  };
+
+.order-page__intro,
+.login-page__button {
+    padding-top: $spacing-05;
+    padding-left: $spacing-06;
+    padding-right: $spacing-06;
+};
+
+.order-page__heading {
+    @include type-style('productive-heading-06');
+    margin-bottom: $spacing-05;
+};
+
+.order-page__r2 {
+    margin-top: rem(-40px);
+};
+
+.order-page__panel-content {
+    padding: $spacing-10 $spacing-06;
+};
+
+.order-page__banner,
+.order-page__r2 {
+  margin-left: -20px;
+  margin-right: -20px;
+
+  @include breakpoint-down(md) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

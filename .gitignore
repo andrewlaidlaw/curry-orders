@@ -1,0 +1,7 @@
+node_modules/
+.env
+order-apis/node_modules/
+menureader/node_modules/
+menu-apis/bin/
+menu-apis/obj/
+frontend/node_modules/
