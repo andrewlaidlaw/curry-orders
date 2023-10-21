@@ -5,4 +5,4 @@ menureader/node_modules/
 menu-apis/bin/
 menu-apis/obj/
 frontend/node_modules/
-frontend/build/
+# frontend/build/
