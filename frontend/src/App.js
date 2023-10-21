@@ -7,14 +7,21 @@ import OrderPage from './content/OrderPage/OrderPage';
 import CurryHeader from './components/CurryHeader/CurryHeader';
 import LoginPage from './content/LoginPage/LoginPage';
 import AppID from 'ibmcloud-appid-js';
+import { configuration } from './config.js';
 
 function App() {
 
-  const orderapiurl = process.env.REACT_APP_ORDER_API;
-  const menuapiurl = process.env.REACT_APP_MENU_API;
+  // const orderapiurl = process.env.REACT_APP_ORDER_API;
+  // const menuapiurl = process.env.REACT_APP_MENU_API;
+  
+  // Pull the API URLs in from the ConfigMap at /public/config.js
+  const orderapiurl = configuration.orderapiurl;
+  const menuapiurl = configuration.menuapiurl;
+
   const appIDclientID = process.env.REACT_APP_CLIENTID;
   const appIDendpoint = process.env.REACT_APP_ENDPOINT;
 
+  // console.log(window);
   // console.log(orderapiurl);
   // console.log(menuapiurl);
 
