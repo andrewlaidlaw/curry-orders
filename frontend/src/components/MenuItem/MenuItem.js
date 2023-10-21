@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, DefinitionTooltip, TableCell, TableRow } from '@carbon/react';
 import { Add } from '@carbon/icons-react';
 
-const orderapiurl = 'http://localhost:8080/api'
+// const orderapiurl = 'http://localhost:8080/api'
 
 const MenuItem = (props) => {
     let name = "";
@@ -10,7 +10,7 @@ const MenuItem = (props) => {
     async function additem(itemid, orderid) {
         const fetchdata = async () => {
             var json = [{"name": "Nothing yet", "id": 1, "categoryId": "none"}];
-            var data = await fetch(orderapiurl + '/order/' + orderid + '/additem/' + itemid)
+            var data = await fetch(props.orderapiurl + '/order/' + orderid + '/additem/' + itemid)
                 .catch(console.error);
             json = await data.json()
                 .catch(console.error);

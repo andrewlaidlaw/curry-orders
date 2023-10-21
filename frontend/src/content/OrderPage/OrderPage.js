@@ -17,10 +17,10 @@ const OrderPage = (props) => {
       <Column lg={16} md={8} sm={4} className="order-page__r2">
         <Grid className="panels-group-content">
           <Column md={6} lg={10} sm={4} className="order-page__panel-content">
-            <FoodMenu render={render} setRender={setRender} userSub={props.userSub} menuapiurl={props.menuapiurl}/>
+            <FoodMenu render={render} setRender={setRender} userSub={props.userSub} menuapiurl={props.menuapiurl} orderapiurl={props.orderapiurl}/>
           </Column>
           <Column md={{ span: 2, offset: 6 }} lg={{ span: 6, offset: 10 }} sm={4} className="order-page__panel-content">
-            <CurrentOrder render={render} setRender={setRender} userSub={props.userSub} menuapiurl={props.menuapiurl}/>
+            <CurrentOrder render={render} setRender={setRender} userSub={props.userSub} menuapiurl={props.menuapiurl} orderapiurl={props.orderapiurl}/>
           </Column>
         </Grid>
       </Column>

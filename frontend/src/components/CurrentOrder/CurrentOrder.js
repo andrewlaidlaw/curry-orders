@@ -3,7 +3,7 @@ import { TableRow, Table, TableBody, TableCell, Button } from '@carbon/react';
 import { TrashCan } from '@carbon/icons-react';
 
 const tip = 0.1; // 10%
-const orderapiurl = 'http://localhost:8080/api'
+// const orderapiurl = 'http://localhost:8080/api'
 
 const CurrentOrder = (props) => {
 
@@ -14,11 +14,12 @@ const CurrentOrder = (props) => {
     useEffect(() => {
         const fetchdata = async () => {
             var json = [{"name": "Nothing yet", "id": 1, "categoryId": "none"}];
-            var data = await fetch(orderapiurl + '/fullorder/' + ordernumber)
+            var data = await fetch(props.orderapiurl + '/fullorder/' + ordernumber)
                 .catch(console.error);
             json = await data.json()
                 .catch(console.error);
             // console.log(json);
+            // if (json.itemdetails == null) {json.itemdetails = []};
             setMyOrder(json);
         };
         fetchdata()
@@ -48,7 +49,7 @@ const CurrentOrder = (props) => {
     async function removeitem(itemid, orderid) {
         const fetchdata = async () => {
             var json = [{"name": "Nothing yet", "id": 1, "categoryId": "none"}];
-            var data = await fetch(orderapiurl + '/order/' + orderid + '/removeitem/' + itemid)
+            var data = await fetch(props.orderapiurl + '/order/' + orderid + '/removeitem/' + itemid)
                 .catch(console.error);
             json = await data.json()
                 .catch(console.error);

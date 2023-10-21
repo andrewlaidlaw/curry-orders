@@ -24,7 +24,7 @@ const FoodMenu = (props) => {
     useEffect(() => {
         const fetchdata = async () => {
             var json = [{"name": "Nothing yet", "id": 1, "categoryId": "none"}];
-            var data = await fetch(menuapiurl + '/menu')
+            var data = await fetch(menuapiurl)
                 .catch(console.error);
             json = await data.json()
                 .catch(console.error);
@@ -43,7 +43,7 @@ const FoodMenu = (props) => {
                 <h1 className='foodmenu__heading'>The Menu</h1>
                 <Accordion aria-label='Categories' className='foodmenu__accordion'>
                     {menu.map( entry =>
-                        <FoodItemList name={entry.name} key={entry.id} id={entry.id} items={entry.items} orderid={orderid} setRender={props.setRender}/>
+                        <FoodItemList name={entry.name} key={entry.id} id={entry.id} items={entry.items} orderid={orderid} setRender={props.setRender} orderapiurl={props.orderapiurl}/>
                         )}
                 </Accordion>
             </Column>
@@ -64,7 +64,7 @@ const FoodItemList = (props) => {
                 </TableHead>
                 <TableBody>
                     {props.items.map((item) => 
-                        <MenuItem key={item.itemid} id={item.itemid} itemname={item.itemname} itemdescription={item.itemdescription} itemprice={item.itemprice} orderid={props.orderid} itemid={item.itemid} setRender={props.setRender}/>
+                        <MenuItem key={item.itemid} id={item.itemid} itemname={item.itemname} itemdescription={item.itemdescription} itemprice={item.itemprice} orderid={props.orderid} itemid={item.itemid} setRender={props.setRender} orderapiurl={props.orderapiurl}/>
                         )
                     }
                 </TableBody>

@@ -15,6 +15,9 @@ function App() {
   const appIDclientID = process.env.REACT_APP_CLIENTID;
   const appIDendpoint = process.env.REACT_APP_ENDPOINT;
 
+  // console.log(orderapiurl);
+  // console.log(menuapiurl);
+
   const appID = React.useMemo(() => {
     return new AppID()
   }, [])
@@ -82,7 +85,7 @@ function App() {
       </Theme>
         <Content>
           <Switch>
-          {welcomeDisplayState && <Route exact path="/" render={(props) => <OrderPage  userName={userName} userSub={userSub} isAuthed={true} menuapiurl={menuapiurl}/>}/>}
+          {welcomeDisplayState && <Route exact path="/" render={(props) => <OrderPage  userName={userName} userSub={userSub} isAuthed={true} menuapiurl={menuapiurl} orderapiurl={orderapiurl}/>}/>}
           {welcomeDisplayState && <Route path="/current" render={(props) => <CurrentOrders userName={userName} isAuthed={true} orderapiurl={orderapiurl}/>} />}
           {loginButtonDisplayState && <Route path="/" render={(props) => <LoginPage loginAction={loginAction} />}/>}
           {/* {loginButtonDisplayState && <Button id='login' onClick={loginAction}>Login</Button>} */}
