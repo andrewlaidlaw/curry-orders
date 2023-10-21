@@ -1,4 +1,5 @@
 gunicorn
 Flask
+asyncio
 bs4
 mariadb

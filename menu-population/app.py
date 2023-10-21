@@ -1,4 +1,5 @@
 from flask import Flask, request
+import asyncio
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import mariadb
