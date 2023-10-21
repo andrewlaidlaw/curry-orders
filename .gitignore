@@ -6,3 +6,4 @@ menu-apis/bin/
 menu-apis/obj/
 frontend/node_modules/
 # frontend/build/
+frontend/yarn.lock

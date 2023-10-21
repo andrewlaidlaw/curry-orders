@@ -13,7 +13,7 @@
     "sass": "^1.66.1"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "*"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   },
   "scripts": {
     "build": "react-scripts build",
