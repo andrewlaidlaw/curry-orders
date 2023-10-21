@@ -7,14 +7,14 @@ const { MongoClient } = require('mongodb');
 const { response, json } = require('express');
 
 // Collect database settings from environment variables
-const mongoHost = process.env.database_host || "localhost";
-const mongoPort = process.env.database_port || "27017";
-const mongoDatabase = process.env.database_name || "orders";
-const mongoUser = process.env.database_user;
-const mongoPassword = process.env.database_password;
+const mongoHost = process.env.DATABASE_HOST || "localhost";
+const mongoPort = process.env.DATABASE_PORT || "27017";
+const mongoDatabase = process.env.DATABASE_NAME || "orders";
+const mongoUser = process.env.DATABASE_USER;
+const mongoPassword = process.env.DATABASE_PASSWORD;
 //const mongoCollection = process.env.database_collection;
 
-const menuapiurl = process.env.menuapiurl || "http://localhost:8081/api/"
+const menuapiurl = process.env.MENUAPIURL || "http://localhost:8081/api/"
 
 // const mongoDatabase = "orders";
 const mongoCollection = "orders";
