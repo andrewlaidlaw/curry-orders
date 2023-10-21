@@ -1,4 +1,4 @@
 gunicorn
-Flask
+Flask[async]
 flask_cors
 mariadb
