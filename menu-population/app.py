@@ -6,10 +6,10 @@ import json
 import datetime
 import os
 
-DB_USER = os.getenv('DB_USER', "root")
-DB_PASS = os.getenv('DB_PASS', "abc1234")
-DB_HOST = os.getenv('DB_HOST', "Localhost")
-DB_DATABASE = os.getenv('DB_DATABASE', "menu")
+DB_USER = os.getenv('database_user', "root")
+DB_PASS = os.getenv('database_password', "abc1234")
+DB_HOST = os.getenv('database_host', "localhost")
+DB_DATABASE = os.getenv('database_name', "menu")
 
 conn_params = {
     "user" : DB_USER,
