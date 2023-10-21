@@ -4,10 +4,10 @@ import mariadb
 import datetime
 import os
 
-DB_USER = os.getenv('database_user', "root")
-DB_PASS = os.getenv('database_password', "abc1234")
-DB_HOST = os.getenv('database_host', "localhost")
-DB_DATABASE = os.getenv('database_name', "menu")
+DB_USER = os.getenv('DATABASE_USER', "root")
+DB_PASS = os.getenv('DATABASE_PASSWORD', "abc1234")
+DB_HOST = os.getenv('DATABASE_HOST', "localhost")
+DB_DATABASE = os.getenv('DATABASE_NAME', "menu")
 
 conn_params = {
     "user" : DB_USER,
