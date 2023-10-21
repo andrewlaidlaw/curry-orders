@@ -8,6 +8,7 @@
         "express": "^4.17.1",
         "mongodb": "3.6.5",
         "node-fetch": "^2.6.1",
+        "@babel/react": "^7",
         "@babel/plugin-proposal-private-property-in-object": "^7.21.0"
     },
     "engine": {
